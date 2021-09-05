@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>“Go to top” Button</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+ 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ 	<style type="text/css">
+ 		body {
+ 			background-color: gray;
+            height: 3000px;
+ 		}
+ 		.go-top {
+			display: none;
+            cursor: pointer;
+			line-height: 50px;
+			background-color: black;
+			text-align: center;
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			position: fixed;
+			right: 50px;
+			bottom: 50px;
+			border: 2px solid gray;
+		}
+		.go-top i {
+			padding: 5px;
+			font-weight: bold;
+			font-size: 24px;
+			color: gray;
+		}
+		.go-top:hover {
+		    box-shadow: 0 10px 40px 0 rgba(255,255,255,0.6);
+		}
+	</style>
+</head>
+<body>
+	<button class="go-top"><i class="fa fa-angle-up" aria-hidden="true"></i></button>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 1000) {
+                    $(".go-top").fadeIn();  
+                } else {
+                    $(".go-top").fadeOut(); 
+                }
+            });
+
+            $(".go-top").click(function(){
+                $("html,body").animate({scrollTop: 0}, 600);
+            });
+        });
+
+	</script>
+</body>
+</html>

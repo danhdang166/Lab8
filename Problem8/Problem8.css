@@ -1,0 +1,25 @@
+.container .row .col-3, .container .row .col-8 {
+    border: 1px solid gray;
+    margin-right: 40px;
+    padding: 10px;
+}
+.container .row .col-3 li {
+    cursor: pointer;
+}
+.intro {
+    border: 1px solid gray;
+    padding: 10px;
+}
+.group-item .button {
+    position: relative;
+}
+#submit, #update {
+    position: absolute;
+}
+#update {
+    display: none;
+}
+#search-id {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
